@@ -1,30 +1,50 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Navbar = () => {
   const navItems = ['About', 'Solutions', 'Why Us', 'Pricing']
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full  py-2 px-4 h-14">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-white py-2 px-4 h-14 ">
       <div className="max-w-7xl mx-auto flex items-center">
         {/* Container with rounded corners */}
-        <div className="bg-black w-full border border-gray-800 rounded-full px-4 py- shadow-lg">
+        <div className=" w-full rounded-full px-4 py- shadow-lg">
           <div className="flex flex-row items-center justify-between gap-2 md:gap-0">
-            
+
             {/* Logo/Title - Optional */}
-            <div className="">
-              <span className="text-white font-semibold text-lg">Brand</span>
+            <div className="flex flex-row gap-1">
+              <Image
+                src="/images/Aronyx_logo 1.png"
+                alt="Aronyx"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+                priority
+              />
+              <Image
+                src="/images/Aronyx_logo 2.png"
+                alt="Aronyx"
+                width={1200}
+                height={320}
+                className="hidden md:block h-8 w-auto"
+                priority
+              />
             </div>
 
             {/* Centered Navigation Buttons */}
             <div className="w-full md:w-auto">
-              <div className="flex justify-center items-center gap- md:gap-6">
+              <div className="flex justify-center items-center gap- md:gap-6 py-2">
                 {navItems.map((item) => (
                   <button
                     key={item}
-                    className="text-white whitespace-nowrap px-4 py-2 rounded-full text-sm md:text-base 
-                             hover:bg-gray-900 hover:text-gray-100 transition-all duration-200
-                             active:bg-gray-800 active:scale-95
-                             focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-black"
+                    className="
+    text-slate-800
+    px-2 py-1 rounded-full text-sm md:text-base
+    hover:bg-slate-900 hover:text-white
+    transition-all duration-200
+    active:bg-slate-800 active:scale-95
+    focus:outline-none focus:ring-2 focus:ring-slate-300
+  "
                   >
                     {item}
                   </button>

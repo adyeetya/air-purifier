@@ -59,19 +59,43 @@ main {
 }
 
 /* Sections spacing */
+
+/* Mobile first */
 section {
-  padding-block: 4rem; /* 64px */
+  padding-left: 1rem;   /* 16px */
+  padding-right: 1rem;
 }
 
-@media (min-width: 768px) {
+/* Small screens (≥640px) */
+@media (min-width: 640px) {
   section {
-    padding-block: 5rem; /* 80px */
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem;
   }
 }
 
-/* Vertical spacing inside sections */
-section > * + * {
-  margin-top: 1.25rem; /* space between children */
+/* Medium screens (≥768px) */
+@media (min-width: 768px) {
+  section {
+    padding-left: 2rem; /* 32px */
+    padding-right: 2rem;
+  }
+}
+
+/* Large screens (≥1024px) */
+@media (min-width: 1024px) {
+  section {
+    padding-left: 3rem; /* 48px */
+    padding-right: 3rem;
+  }
+}
+
+/* Extra-large screens (≥1280px) */
+@media (min-width: 1280px) {
+  section {
+    padding-left: 4rem; /* 64px */
+    padding-right: 4rem;
+  }
 }
 
 /* Generic content blocks */
