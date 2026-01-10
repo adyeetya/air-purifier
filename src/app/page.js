@@ -5,6 +5,9 @@ import StatsSection from "@/components/StatsSection";
 import { motion } from "framer-motion";
 import AutoCarousel from "@/components/ImagesSlider";
 import About from "@/components/About";
+import ProductsSection from "@/components/ProductsSection";
+import HowWeWork from "@/components/HowWeWork";
+import CaseStudy from "@/components/CaseStudy";
 export default function Home() {
   const images = ['/images/Aronyx_logo 2.png', '/images/Aronyx_logo 2.png', '/images/Aronyx_logo 2.png']
   return (
@@ -25,6 +28,10 @@ export default function Home() {
       </motion.div>
       <StatsSection />
       <About />
+      <ProductsSection />
+
+      <HowWeWork />
+      <CaseStudy />
     </div>
   );
 }

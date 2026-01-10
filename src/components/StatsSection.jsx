@@ -27,11 +27,11 @@ const StatsSection = () => {
                         {/* Image below stats */}
                         <div className="mb-8">
                             <Image
-                                src="/images/Frame 1183.png"
+                                src="/images/stat.png"
                                 alt="Data visualization"
                                 width={600}
                                 height={350}
-                                className="w-[500px] h-auto"
+                                className="w-125 h-auto"
                             />
 
                         </div>

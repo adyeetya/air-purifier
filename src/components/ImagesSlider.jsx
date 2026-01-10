@@ -2,34 +2,36 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+const getSettingsFromWidth = (width, visibleItems, gap) => {
+    if (width < 640) return { items: 2, gap: 12 };
+    if (width < 1024) return { items: 3, gap: 24 };
+    return { items: visibleItems, gap };
+};
+
 const MarqueeCarousel = ({ images, speed = 5, visibleItems = 6, gap = 60 }) => {
-    // Duplicate images for seamless looping
     const duplicatedImages = [...images, ...images, ...images];
 
-    // Responsive visibleItems and gap
-    const getResponsiveSettings = () => {
-        if (typeof window === 'undefined') return { items: visibleItems, gap };
-        if (window.innerWidth < 640) return { items: 2, gap: 12 }; // mobile
-        if (window.innerWidth < 1024) return { items: 3, gap: 24 }; // tablet
-        return { items: visibleItems, gap };
-    };
-
-    const [responsive, setResponsive] = useState(getResponsiveSettings());
+    // ✅ deterministic initial render (SSR safe)
+    const [responsive, setResponsive] = useState({
+        items: visibleItems,
+        gap,
+    });
 
     useEffect(() => {
-        const handleResize = () => setResponsive(getResponsiveSettings());
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        const update = () => {
+            setResponsive(
+                getSettingsFromWidth(window.innerWidth, visibleItems, gap)
+            );
+        };
+
+        update(); // run once on mount
+        window.addEventListener('resize', update);
+        return () => window.removeEventListener('resize', update);
+    }, [visibleItems, gap]);
 
     const itemWidth = `calc((100% - ${(responsive.items - 1) * responsive.gap}px) / ${responsive.items})`;
-    const [duration, setDuration] = useState(images.length * (10 / speed));
 
-    // Adjust duration when props change
-    useEffect(() => {
-        setDuration(images.length * (10 / speed));
-    }, [images.length, speed]);
+    const duration = images.length * (10 / speed);
 
     return (
         <div className="relative mb-24 w-full overflow-hidden py-4 
