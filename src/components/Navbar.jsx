@@ -45,7 +45,7 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     className={
-                      "text-slate-800 px-2 py-1 rounded-full text-sm md:text-base hover:bg-slate-900 hover:text-white transition-all duration-200 active:bg-slate-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                      "text-slate-800 px-2 py-1 rounded-full text-xs md:text-base hover:bg-slate-900 hover:text-white transition-all duration-200 active:bg-slate-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-300"
                     }
                   >
                     {item.name}
