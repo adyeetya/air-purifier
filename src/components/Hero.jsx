@@ -86,7 +86,7 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
             >
-              <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl  font-semibold sm:font-bold leading-tight sm:leading-normal mt-3 sm:mt-4 md:mt-6">
+              <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl  font-semibold sm:font-bold leading-tight sm:leading-normal mt-2">
                 <span className="block">
                   <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">You</motion.span>
                   <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">are</motion.span>

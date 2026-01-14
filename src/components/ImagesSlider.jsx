@@ -34,7 +34,7 @@ const MarqueeCarousel = ({ images, speed = 5, visibleItems = 6, gap = 60 }) => {
     const duration = images.length * (10 / speed);
 
     return (
-        <section className="relative  w-full overflow-hidden  
+        <div className="py-4 relative  w-full overflow-hidden  
                 bg-linear-to-b ">
             {/* <h2 className="text-2xl md:text-3xl font-thin text-center mb-6">Our Customers</h2> */}
             <motion.div
@@ -63,7 +63,7 @@ const MarqueeCarousel = ({ images, speed = 5, visibleItems = 6, gap = 60 }) => {
                     </div>
                 ))}
             </motion.div>
-        </section>
+        </div>
     );
 };
 

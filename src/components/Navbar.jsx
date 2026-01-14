@@ -2,7 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 
 const Navbar = () => {
-  const navItems = ['About', 'Solutions', 'Why Us', 'Pricing']
+  // Map nav item labels to anchor links. Anchors taken from footer where applicable.
+  const navItems = [
+    { name: 'About', href: '#about-us' }, // matches footer 'Who We Are'
+    { name: 'Solutions', href: '#products' }, // matches footer products/solutions
+    { name: 'Why Us', href: '#case-study' }, // use facts anchor for 'Why Us'
+    { name: 'Pricing', href: '#products' } // assumed anchor (not present in footer)
+  ]
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white py-2 px-4 h-14 ">
@@ -35,19 +41,15 @@ const Navbar = () => {
             <div className="w-full md:w-auto">
               <div className="flex justify-center items-center gap- md:gap-6 py-2">
                 {navItems.map((item) => (
-                  <button
-                    key={item}
-                    className="
-    text-slate-800
-    px-2 py-1 rounded-full text-sm md:text-base
-    hover:bg-slate-900 hover:text-white
-    transition-all duration-200
-    active:bg-slate-800 active:scale-95
-    focus:outline-none focus:ring-2 focus:ring-slate-300
-  "
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={
+                      "text-slate-800 px-2 py-1 rounded-full text-sm md:text-base hover:bg-slate-900 hover:text-white transition-all duration-200 active:bg-slate-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                    }
                   >
-                    {item}
-                  </button>
+                    {item.name}
+                  </a>
                 ))}
               </div>
             </div>

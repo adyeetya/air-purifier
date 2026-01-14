@@ -9,7 +9,7 @@ import ProductsSection from "@/components/ProductsSection";
 import HowWeWork from "@/components/HowWeWork";
 import CaseStudy from "@/components/CaseStudy";
 export default function Home() {
-  const images = ['/images/Aronyx_logo 2.png', '/images/Aronyx_logo 2.png', '/images/Aronyx_logo 2.png']
+  const images = ['/images/brands/Logo1.png', '/images/brands/Logo2.png', '/images/brands/Logo3.png', '/images/brands/Logo1.png']
   return (
     <div className="">
       <Hero />
