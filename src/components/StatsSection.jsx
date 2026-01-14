@@ -24,12 +24,12 @@ const StatsSection = () => {
               {/* Stats images */}
               <div className="flex flex-col md:flex-row flex-wrap gap-3 md:gap-4 mb-6">
                 <img
-                  src="/images/stats/stat1.png"
+                  src="/images/stats/stat2.png"
                   alt="Stat 1"
                   className="h-14 md:h-28 w-auto object-contain"
                 />
                 <img
-                  src="/images/stats/stat2.png"
+                  src="/images/stats/stat1.png"
                   alt="Stat 2"
                   className="h-14 md:h-28 w-auto object-contain"
                 />

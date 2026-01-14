@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Increase root font-size so Tailwind's rem-based text utilities scale up project-wide */
+html { font-size: 18px; }
+
 /* ---------- Base ---------- */
 html,
 body {

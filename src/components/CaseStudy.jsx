@@ -13,10 +13,10 @@ const articleContent = `
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
         <!-- Image Container - ABOVE text on mobile, right on desktop -->
         <div class="w-full lg:w-2/5 flex-shrink-0 order-first lg:order-last">
-          <div class="bg-gray-50 rounded-lg p-4">
+          <div class=" rounded-lg p-1">
             <p class="text-gray-500 text-sm mb-3">Case Study Results</p>
             <!-- Image will be placed here - you can replace this with your image -->
-            <div class="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
+            <div class=" rounded flex items-center justify-center overflow-hidden">
               <img src='/images/stats/case_graph.png' alt="Case Study Graph" class="w-full h-full object-contain">
             </div>
           </div>
