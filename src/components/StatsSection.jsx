@@ -12,17 +12,17 @@ const StatsSection = () => {
             <div className="flex-1 flex flex-col justify-between">
               {/* Text block */}
               <div>
-                <h4 className="text-2xl md:text-3xl font-light mb-3">
+                <h4 className="text-2xl md:text-4xl font-light mb-3">
                   Pollution does not stay outside the coach.
                 </h4>
 
-                <p className="text-gray-500 mb-6 md:mb-10 text-sm md:text-base">
+                <p className="text-gray-500 mb-6 md:mb-10 text-sm md:text-lg">
                   It enters silently through ventilation ducts, brake dust, track debris and exhaust seepage.
                 </p>
               </div>
 
               {/* Stats images */}
-              <div className="flex flex-col md:flex-row flex-wrap gap-3 md:gap-4 mb-6">
+              <div className="flex flex-col md:flex-row flex-wrap gap-3 md:gap-16 lg:gap-24 mb-6">
                 <img
                   src="/images/stats/stat2.png"
                   alt="Stat 1"
