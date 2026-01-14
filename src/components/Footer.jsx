@@ -59,8 +59,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="bg-blue-50 shadow-md">
+  {/* Main Footer */}
+  <div id="footer" className="bg-blue-50 shadow-md">
         <div className="max-w-6xl mx-auto py-12 px-6">
           <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-6 text-sm">
 

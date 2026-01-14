@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
   // Map nav item labels to anchor links. Anchors taken from footer where applicable.
@@ -7,7 +8,7 @@ const Navbar = () => {
     { name: 'About', href: '#about-us' }, // matches footer 'Who We Are'
     { name: 'Solutions', href: '#products' }, // matches footer products/solutions
     { name: 'Why Us', href: '#case-study' }, // use facts anchor for 'Why Us'
-    { name: 'Pricing', href: '#products' } // assumed anchor (not present in footer)
+    { name: 'Products', href: '#products' } // assumed anchor (not present in footer)
   ]
 
   return (
@@ -56,11 +57,11 @@ const Navbar = () => {
 
             {/* CTA Button - Optional */}
             <div className="hidden md:block">
-              <button className="bg-blue-100 text-blue-600 px-6 py- rounded-full font-medium
+              <a href="#footer" className="bg-blue-100 text-blue-600 px-6 py- rounded-full font-medium
                               hover:bg-gray-200 transition-colors duration-200
                               active:scale-95">
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
         </div>

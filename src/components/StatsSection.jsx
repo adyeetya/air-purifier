@@ -80,19 +80,19 @@ const StatsSection = () => {
             {/* Stats images - Left side */}
             <div className="flex-1 flex flex-col justify-center items-start gap-3">
               <img
-                src="/images/stats/stat1.png"
+                src="/images/stats/stat2.png"
                 alt="Stat 1"
-                className="h-14 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
               <img
-                src="/images/stats/stat2.png"
+                src="/images/stats/stat1.png"
                 alt="Stat 2"
-                className="h-14 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
               <img
                 src="/images/stats/stat3.png"
                 alt="Stat 3"
-                className="h-14 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </div>
 
