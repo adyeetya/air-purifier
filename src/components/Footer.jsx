@@ -1,24 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
+import ConnectButton from './ConnectWithUs'
 // import { FaYoutube, FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 const Footer = () => {
   const footerLinks = {
     main: [
       { name: 'Home', href: '#' },
-      { name: 'Products', href: '#' },
-      { name: 'Impact', href: '#' },
-      { name: 'Reviews', href: '#' },
-      { name: 'Case Study', href: '#' }
+      { name: 'Products', href: '#products' },
+      { name: 'Facts', href: '#facts' },
+      { name: 'Case Study', href: '#case-study' }
     ],
     solutions: [
-      { name: 'AXT-CAB', href: '#' },
-      { name: 'AXT-OUT', href: '#' },
-      { name: 'AXT-MOD', href: '#' }
+      { name: 'AXT-CAB', href: '#products' },
+      { name: 'AXT-OUT', href: '#products' },
+      { name: 'AXT-MOD', href: '#products' }
     ],
     company: [
-      { name: 'Who We Are', href: '#' },
-      { name: 'Connect with Us!', href: '#' }
+      { name: 'Who We Are', href: '#about-us' },
+      { name: 'Connect with Us!', href: '' }
     ],
     socials: [
       { name: 'YouTube', href: '#' },
@@ -38,22 +38,24 @@ const Footer = () => {
             Transform ordinary airflow into <br />
             peak-performance breathing.
           </h2>
-          <span className="text-sm font-medium bg-green-300 px-4 py-2 rounded-full">
+          {/* <a href className="text-sm font-medium bg-green-300 px-4 py-2 rounded-full">
             Connect with us!
-          </span>
+          </a> */}
+          <ConnectButton />
         </div>
       </div>
 
       {/* Mobile View - Different layout for phone */}
       <div className="md:hidden py-12 px-6 bg-gradient-to-b from-white to-gray-50">
         <div className="text-center">
-          <h2 className="text-3xl font-light text-gray-900 mb-6">
+          <h2 className="text-xl font-light text-gray-900 mb-6">
             Transform ordinary airflow into <br />
             peak-performance breathing.
           </h2>
-          <span className="text-sm font-medium bg-green-300 px-4 py-2 rounded-full">
+          {/* <span className="text-sm font-medium bg-green-300 px-4 py-2 rounded-full">
             Connect with us!
-          </span>
+          </span> */}
+          <ConnectButton />
         </div>
       </div>
 
@@ -64,7 +66,7 @@ const Footer = () => {
 
             {/* Logo Column */}
             <div className="flex flex-col items-center md:items-start">
-              <div className="flex flex-row gap-2 mb-4">
+              <div className="flex flex-col md:flex-row items-center gap-2 mb-4">
                 <Image
                   src="/images/Aronyx_logo 1.png"
                   alt="Aronyx"
@@ -78,7 +80,7 @@ const Footer = () => {
                   alt="Aronyx"
                   width={1200}
                   height={1000}
-                  className="hidden md:block h-20 w-auto"
+                  className="block h-20 w-auto"
                   priority
                 />
               </div>
@@ -86,7 +88,7 @@ const Footer = () => {
 
             {/* First Column - Main Links */}
             <div>
-            
+
               <ul className="space-y-3">
                 {footerLinks.main.map((link) => (
                   <li key={link.name}>
@@ -136,7 +138,7 @@ const Footer = () => {
             </div>
 
             {/* Fourth Column - Socials */}
-            <div>
+            {/* <div>
               <h3 className="text-blue-600 mb-4">Socials</h3>
               <div className="flex flex-col space-y-3">
                 {footerLinks.socials.map((social) => (
@@ -150,7 +152,7 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Bottom Bar */}

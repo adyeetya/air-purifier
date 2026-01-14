@@ -62,13 +62,17 @@ main {
 
 /* Mobile first */
 section {
-  padding-left: 1rem;   /* 16px */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem; /* 16px */
   padding-right: 1rem;
 }
 
 /* Small screens (≥640px) */
 @media (min-width: 640px) {
   section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     padding-left: 1.5rem; /* 24px */
     padding-right: 1.5rem;
   }
@@ -77,6 +81,8 @@ section {
 /* Medium screens (≥768px) */
 @media (min-width: 768px) {
   section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     padding-left: 2rem; /* 32px */
     padding-right: 2rem;
   }
@@ -85,6 +91,8 @@ section {
 /* Large screens (≥1024px) */
 @media (min-width: 1024px) {
   section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
     padding-left: 3rem; /* 48px */
     padding-right: 3rem;
   }
@@ -93,6 +101,8 @@ section {
 /* Extra-large screens (≥1280px) */
 @media (min-width: 1280px) {
   section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     padding-left: 4rem; /* 64px */
     padding-right: 4rem;
   }

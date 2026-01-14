@@ -61,7 +61,7 @@ const HowWeWork = () => {
     }
 
     return (
-        <div className="py-12 px-4">
+        <section className="">
             <div className="max-w-6xl mx-auto text-center">
                 <motion.div
                     initial="hidden"
@@ -104,7 +104,7 @@ const HowWeWork = () => {
                                         className="w-full h-full object-contain"
                                     />
                                     {/* Name Overlay - Centered on image */}
-                                    <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className={`absolute inset-0 flex items-center justify-center ${step.id === 1 ? 'translate-x-[-5px]' : ''}`}>
                                         <span className="text-xs font-light text-gray-600">
                                             {step.name}
                                         </span>
@@ -120,7 +120,7 @@ const HowWeWork = () => {
                     </motion.div>
                 </motion.div>
             </div>
-        </div>
+        </section>
     )
 }
 

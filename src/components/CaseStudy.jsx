@@ -7,74 +7,54 @@ const CaseStudy = () => {
         setIsExpanded(!isExpanded)
     }
 
-    const articleContent = `
-    <div class="space-y-6">
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Introduction</h3>
-        <p class="text-gray-700">Urban air pollution has become one of the most pressing environmental challenges of our time. With increasing urbanization and industrial activities, cities worldwide are grappling with deteriorating air quality that significantly impacts public health and ecological balance.</p>
-      </section>
+const articleContent = `
+    <div class="w-full">
+      <!-- This will be displayed in a two-column layout -->
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        <!-- Image Container - ABOVE text on mobile, right on desktop -->
+        <div class="w-full lg:w-2/5 flex-shrink-0 order-first lg:order-last">
+          <div class="bg-gray-50 rounded-lg p-4">
+            <p class="text-gray-500 text-sm mb-3">Case Study Results</p>
+            <!-- Image will be placed here - you can replace this with your image -->
+            <div class="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
+              <img src='/images/stats/case_graph.png' alt="Case Study Graph" class="w-full h-full object-contain">
+            </div>
+          </div>
+        </div>
 
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Methodology</h3>
-        <p class="text-gray-700">Our study employed a multi-phase approach over 12 months, focusing on high-density urban zones with significant vehicular traffic and industrial presence. We installed 50 monitoring stations across the metropolitan area to collect baseline data on various air quality parameters including PM2.5, PM10, NOx, SOx, and CO levels.</p>
-        <p class="text-gray-700">The filtration systems were strategically placed in key locations including public transportation hubs, commercial districts, and residential areas near industrial zones. Each system was equipped with real-time monitoring capabilities and connected to a central dashboard for data analysis.</p>
-      </section>
+        <!-- Text Content - BELOW image on mobile, left on desktop -->
+        <div class="flex-1 order-last lg:order-first">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-lg font-medium text-blue-600 mb-3">Solution</h3>
+              <p class="text-gray-700">
+                Retrofitted AHUs with Aironyx aluminium-coated conductive filters, enabling active electro-capture without HVAC modifications.
+              </p>
+            </div>
 
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Technical Implementation</h3>
-        <p class="text-gray-700">The core technology utilized in this study was Aironyx's proprietary electro-surface interaction system. Unlike traditional mechanical filters that rely on dense materials to trap pollutants, our system uses electrically charged conductive surfaces to attract and neutralize airborne particles.</p>
-        <p class="text-gray-700">Key technical features included:</p>
-        <ul class="list-disc pl-5 text-gray-700 space-y-2">
-          <li>Aluminium-coated conductive media with controlled surface charge</li>
-          <li>Low-resistance airflow architecture reducing fan energy by 60%</li>
-          <li>Smart sensors for adaptive filtration based on real-time air quality data</li>
-          <li>Modular design allowing for easy maintenance and scalability</li>
-        </ul>
-      </section>
+            <div>
+              <h3 class="text-lg font-medium text-blue-600 mb-3">Results</h3>
+              <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                <li>PM2.5 reduced from 51.8–58.3 μg/m³ to 12.2 μg/m³</li>
+                <li>Indoor air quality improved from Bad to Good</li>
+                <li>Stable, sustained performance in live operation</li>
+              </ul>
+            </div>
 
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Environmental Impact</h3>
-        <p class="text-gray-700">The implementation resulted in significant environmental benefits beyond air quality improvement. The energy-efficient design reduced overall electricity consumption, while the system's longevity minimized waste generation from filter replacements.</p>
-        <p class="text-gray-700">Notably, we observed a 25% reduction in acid rain precursors and a measurable decrease in surface deposition of particulate matter on buildings and infrastructure, potentially extending the lifespan of urban structures.</p>
-      </section>
-
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Public Health Outcomes</h3>
-        <p class="text-gray-700">Collaborating with local health authorities, we tracked respiratory health indicators across the study area. The data revealed significant improvements:</p>
-        <ul class="list-disc pl-5 text-gray-700 space-y-2">
-          <li>42% reduction in asthma-related emergency room visits among children</li>
-          <li>31% decrease in respiratory medication prescriptions</li>
-          <li>Improved lung function test results in monitored population groups</li>
-          <li>Enhanced productivity and reduced absenteeism in workplaces</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Economic Analysis</h3>
-        <p class="text-gray-700">The economic benefits were substantial, with cost-benefit analysis showing:</p>
-        <ul class="list-disc pl-5 text-gray-700 space-y-2">
-          <li>Healthcare cost savings estimated at $2.3 million annually</li>
-          <li>Productivity gains valued at $4.1 million per year</li>
-          <li>Reduced maintenance costs for buildings and infrastructure</li>
-          <li>ROI achieved within 3.2 years of implementation</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Conclusion and Future Directions</h3>
-        <p class="text-gray-700">This case study demonstrates that innovative air purification technology can effectively address urban air quality challenges while delivering economic and health benefits. The success of this pilot program has paved the way for expansion to other cities and the development of next-generation systems.</p>
-        <p class="text-gray-700">Future initiatives will focus on integrating renewable energy sources, enhancing IoT capabilities for predictive maintenance, and developing smaller-scale units for residential applications.</p>
-      </section>
-
-      <section>
-        <h3 class="text-lg font-medium text-gray-900 mb-3">Acknowledgments</h3>
-        <p class="text-gray-700">This study was conducted in collaboration with municipal authorities, environmental agencies, and academic institutions. Special thanks to all participating organizations and community members who contributed to this successful initiative.</p>
-      </section>
+            <div>
+              <h3 class="text-lg font-medium text-blue-600 mb-3">Impact</h3>
+              <p class="text-gray-700">
+                Proven plug-and-play solution for large commercial buildings, scalable without system redesign.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   `
 
     return (
-        <div className="py-12 px-4">
+        <section id='case-study' className="">
             <div className="max-w-6xl mx-auto">
 
                 <div className='my-12 text-'>
@@ -141,7 +121,7 @@ const CaseStudy = () => {
                     )}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
