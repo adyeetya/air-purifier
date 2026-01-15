@@ -12,10 +12,10 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-white py-2 px-4 h-14 ">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-white py-2 px-2 xs:px-4 h-14 ">
       <div className="max-w-7xl mx-auto flex items-center">
         {/* Container with rounded corners */}
-        <div className=" w-full rounded-full px-4 py- shadow-lg">
+        <div className=" w-full rounded-full px-2 py- shadow-lg">
           <div className="flex flex-row items-center justify-between gap-2 md:gap-0">
 
             {/* Logo/Title - Optional */}
@@ -46,7 +46,7 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     className={
-                      "text-slate-800 px-2 py-1 rounded-full text-xs md:text-base hover:bg-slate-900 hover:text-white transition-all duration-200 active:bg-slate-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                      "whitespace-nowrap text-slate-800 px-2 py-1 rounded-full text-xs md:text-base hover:bg-slate-900 hover:text-white transition-all duration-200 active:bg-slate-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-300"
                     }
                   >
                     {item.name}

@@ -64,7 +64,8 @@ const StatsSection = () => {
         </div>
 
         {/* MOBILE LAYOUT - shown only on mobile */}
-        <div className="block md:hidden">
+   
+        <div className="block md:hidden relative">
           {/* Heading at top */}
           <div className="mb-6">
             <h4 className="text-2xl font-light mb-3">
@@ -75,42 +76,30 @@ const StatsSection = () => {
             </p>
           </div>
 
-          {/* Row with stats images on left and device image on right */}
-          <div className="flex flex-row items-center gap-4 my-12 h-48">
-            {/* Stats images - Left side - 60% */}
-            <div className="w-[60%] flex flex-col justify-center items-start gap-3 h-full">
-              <img
-                src="/images/stats/stat2.png"
-                alt="Stat 1"
-                className="h-16 w-auto object-contain"
-              />
-              <img
-                src="/images/stats/stat1.png"
-                alt="Stat 2"
-                className="h-16 w-auto object-contain"
-              />
-              <img
-                src="/images/stats/stat3.png"
-                alt="Stat 3"
-                className="h-16 w-auto object-contain"
-              />
+          {/* Container with overlapping elements */}
+          <div className="flex items-start relative my-12 min-h-[250px]">
+            {/* Stats cards - Left side - positioned in front */}
+            <div className="relative z-20 w-[70%]">
+              <AirQualityStats />
             </div>
 
-            {/* Device image - Right side - 40% */}
-            <div className="w-[40%] flex-shrink-0 h-full">
-              <Image
-                src="/images/ind_stat_img.png"
-                alt="AQI"
-                width={300}
-                height={250}
-                className="w-full h-full object-contain"
-                priority
-              />
+            {/* Device image - Right side - positioned behind */}
+            <div className="absolute right-0 top-0 w-[70%] h-full z-10 flex items-center justify-end">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/ind_stat_img.png"
+                  alt="AQI"
+                  width={300}
+                  height={250}
+                  className="w-full h-auto object-contain opacity-80"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
           {/* Bottom text */}
-          <p className="text-gray-700 text-sm font-semibold">
+          <p className="text-gray-700 text-sm font-semibold relative z-30">
             India is moving millions every day
             <span className="font-light italic">
               {' '}— inside mobile pollution chambers.
@@ -123,3 +112,43 @@ const StatsSection = () => {
 }
 
 export default StatsSection
+
+
+
+const AirQualityStats = () => {
+  const stats = [
+    {
+      mainHeading: '30X',
+      subheading: 'PM2.5 is 30× thinner than a human hair'
+    },
+    {
+      mainHeading: '60sec',
+      subheading: 'It enters bloodstream in under 60 seconds'
+    },
+    {
+      mainHeading: '99%',
+      subheading: 'of the world\'s population lives in places where air quality exceeds WHO limits.'
+    }
+  ];
+
+  return (
+    <div className="">
+      <div className=" relative">
+
+
+
+        {/* Mapped stats arranged vertically */}
+        <div className="space-y-3">
+          {stats.map((stat, index) => (
+            <div key={index} className="border-b border-gray-400 relative z-10 bg- rounded">
+              <div className="text-xl font-bold text-gray-800">{stat.mainHeading}</div>
+              <div className='w-1/2 h-1 rounded-full bg-green-500'> </div>
+              <div className="text-gray-800 text-xs mt-1">{stat.subheading}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+

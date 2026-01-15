@@ -63,6 +63,13 @@ const FactsFiguresCarousel = () => {
             }
         }
     }
+
+    const getSettingsFromWidth = (width) => {
+        if (width < 640) return { items: 2, gap: 14 }
+        if (width < 1024) return { items: 2, gap: 20 }
+        return { items: 3, gap: 24 }
+    }
+
     const duplicatedFacts = [...facts, ...facts, ...facts]
 
     const [responsive, setResponsive] = useState({
@@ -80,7 +87,12 @@ const FactsFiguresCarousel = () => {
     }, [])
 
     const itemWidth = `calc((100% - ${(responsive.items - 1) * responsive.gap}px) / ${responsive.items})`
-    const duration = facts.length * 4
+
+ 
+    const duration =
+        responsive.items === 3
+            ? facts.length * 0.5    // even faster mobile speed
+            : facts.length * 4
 
     return (
         <section className="w-full text-center overflow-hidden  bg-[#f3f9ff]">
@@ -111,24 +123,28 @@ const FactsFiguresCarousel = () => {
                         <motion.div
                             whileHover={{ y: -6, scale: 1.02 }}
                             transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                            className="h-full rounded-2xl 
-                   bg-gradient-to-br from-white to-[#eef6ff]
-                   border border-[#c7ddff]
-                   shadow-[0_8px_30px_rgba(37,99,235,0.12)]
-                   p-7 flex flex-col justify-between"
+                            className="
+        h-full rounded-2xl
+        bg-gradient-to-br from-white to-[#eef6ff]
+        border border-[#c7ddff]
+        shadow-[0_8px_30px_rgba(37,99,235,0.12)]
+        p-5 md:p-7
+        flex flex-col justify-between
+    "
                         >
-                            <div className="text-3xl font-bold text-blue-600 tracking-tight">
+                            <div className="text-md md:text-3xl font-semibold md:font-bold text-blue-600 tracking-tight">
                                 {fact.value}
                             </div>
 
-                            <div className="mt-4 text-lg font-semibold text-gray-900">
+                            <div className="mt-2 md:mt-4 text-xs md:text-lg text-gray-900">
                                 {fact.title}
                             </div>
 
-                            <div className="mt-2 text-sm leading-relaxed text-gray-600">
+                            <div className="mt-1 md:mt-2 text-[10px] md:text-sm leading-relaxed text-gray-600">
                                 {fact.desc}
                             </div>
                         </motion.div>
+
                     </div>
                 ))}
             </motion.div>
