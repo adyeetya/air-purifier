@@ -85,13 +85,13 @@ const StatsSection = () => {
 
             {/* Device image - Right side - positioned behind */}
             <div className="absolute right-0 top-0 w-[100%] h-full z-10 flex items-center justify-end">
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full ">
                 <Image
                   src="/images/ind_stat_img.png"
                   alt="AQI"
                   width={300}
                   height={250}
-                  className="w-full h-auto object-contain opacity-45"
+                  className="w-full h-auto object-contain opacity-35 ml-12"
                   priority
                 />
               </div>
