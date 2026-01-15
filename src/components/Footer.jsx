@@ -158,7 +158,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="border-t border-gray-300 mt-8 pt-8 text-center">
             <p className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} Aironyx. All rights reserved.
+              © 2025 Aironyx. All rights reserved.
             </p>
           </div>
         </div>

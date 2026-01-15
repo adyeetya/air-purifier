@@ -8,8 +8,9 @@ import About from "@/components/About";
 import ProductsSection from "@/components/ProductsSection";
 import HowWeWork from "@/components/HowWeWork";
 import CaseStudy from "@/components/CaseStudy";
+import FactsFiguresCarousel from "@/components/FactsAndFigures";
 export default function Home() {
-  const images = ['/images/brands/Logo1.png', '/images/brands/Logo2.png', '/images/brands/Logo3.png', '/images/brands/Logo1.png']
+  const images = ['/images/brands/Logo1.png', '/images/brands/Logo2.png', '/images/brands/Logo3.png', '/images/brands/Logo4.png']
   return (
     <div className="">
       <Hero />
@@ -18,7 +19,7 @@ export default function Home() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
-        className="mt-12"
+        className="mt-12 hidden md:block"
       >
 
         <AutoCarousel
@@ -29,6 +30,7 @@ export default function Home() {
       <StatsSection />
       <About />
       <ProductsSection />
+      <FactsFiguresCarousel />
 
       <HowWeWork />
       <CaseStudy />

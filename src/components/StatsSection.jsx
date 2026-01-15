@@ -7,7 +7,7 @@ const StatsSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* DESKTOP LAYOUT - hidden on mobile */}
         <div className="hidden md:flex">
-          <div className="flex flex-row gap-6 md:gap-12 w-full">
+          <div className="flex flex-row gap-6 md:gap-8 w-full">
             {/* LEFT SIDE */}
             <div className="flex-1 flex flex-col justify-between">
               {/* Text block */}
@@ -22,7 +22,7 @@ const StatsSection = () => {
               </div>
 
               {/* Stats images */}
-              <div className="flex flex-col md:flex-row flex-wrap gap-3 md:gap-16 lg:gap-24 mb-6">
+              <div className="flex flex-col md:flex-row gap-2  md:gap-16 lg:gap-24 mb-6">
                 <img
                   src="/images/stats/stat2.png"
                   alt="Stat 1"
@@ -76,34 +76,34 @@ const StatsSection = () => {
           </div>
 
           {/* Row with stats images on left and device image on right */}
-          <div className="flex flex-row items-start gap-4 mb-6">
-            {/* Stats images - Left side */}
-            <div className="flex-1 flex flex-col justify-center items-start gap-3">
+          <div className="flex flex-row items-center gap-4 my-12 h-48">
+            {/* Stats images - Left side - 60% */}
+            <div className="w-[60%] flex flex-col justify-center items-start gap-3 h-full">
               <img
                 src="/images/stats/stat2.png"
                 alt="Stat 1"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
               <img
                 src="/images/stats/stat1.png"
                 alt="Stat 2"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
               <img
                 src="/images/stats/stat3.png"
                 alt="Stat 3"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </div>
 
-            {/* Device image - Right side */}
-            <div className="w-48 flex-shrink-0">
+            {/* Device image - Right side - 40% */}
+            <div className="w-[40%] flex-shrink-0 h-full">
               <Image
                 src="/images/ind_stat_img.png"
                 alt="AQI"
                 width={300}
                 height={250}
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
                 priority
               />
             </div>

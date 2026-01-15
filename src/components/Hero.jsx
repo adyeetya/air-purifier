@@ -4,10 +4,11 @@ import React from 'react'
 import { Star } from 'lucide-react'
 import { motion } from 'framer-motion'
 import ConnectButton from './ConnectWithUs'
+import AutoCarousel from './ImagesSlider'
 const Hero = () => {
   const line1 = "You are not breathing air."
   const line2 = "You are breathing damage."
-
+  const images = ['/images/brands/Logo1.png', '/images/brands/Logo2.png', '/images/brands/Logo3.png', '/images/brands/Logo4.png']
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -20,11 +21,11 @@ const Hero = () => {
   }
 
   const wordVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       color: "#9ca3af"
     },
-    visible: { 
+    visible: {
       opacity: 1,
       color: "#000000",
       transition: {
@@ -46,7 +47,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative h-[70vh] md:h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-hidden">
       {/* Background SVG Image */}
       <div
         className="absolute inset-0"
@@ -58,7 +59,7 @@ const Hero = () => {
       />
 
       {/* Main Content */}
-      <div className="relative z-10 flex h-[60vh] md:min-h-screen items-center justify-center px-4">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
         <div className="max-w-4xl mx-auto w-full text-center px-4">
           {/* Animated Title */}
           <div className="mb-6">
@@ -90,7 +91,7 @@ const Hero = () => {
                 <span className="block">
                   <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">You</motion.span>
                   <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">are</motion.span>
-              
+
                   <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">breathing</motion.span>
                   <motion.span variants={wordVariants} className="inline-block">damage.</motion.span>
                 </span>
@@ -118,7 +119,7 @@ const Hero = () => {
 
           {/* 5 Stars and Trusted Text */}
           <motion.div
-            className="  flex flex-col items-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-none"
+            className="mt-12  flex flex-col items-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-none"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -141,8 +142,23 @@ const Hero = () => {
             </p>
           </motion.div>
         </div>
+
+
       </div>
-    </section>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        className="absolute bottom-0 w-full mb-6 block md:hidden"
+      >
+
+        <AutoCarousel
+          images={images}
+
+        />
+      </motion.div>
+    </div>
   )
 }
 

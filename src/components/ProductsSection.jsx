@@ -19,13 +19,10 @@ const products = [
 ]
 
 const ProductsSection = () => {
-    const [activeImages, setActiveImages] = useState({})
+    const [activeId, setActiveId] = useState(null)
 
     const toggleImage = (id) => {
-        setActiveImages((prev) => ({
-            ...prev,
-            [id]: !prev[id],
-        }))
+        setActiveId((prev) => (prev === id ? null : id))
     }
 
     // Simple animation variants
@@ -85,7 +82,7 @@ const ProductsSection = () => {
                     {/* Products Grid - Single column on mobile, 3 columns on desktop */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                         {products.map((product) => {
-                            const isAlt = activeImages[product.id]
+                            const isAlt = activeId === product.id
                             return (
                                 <div
                                     key={product.id}
