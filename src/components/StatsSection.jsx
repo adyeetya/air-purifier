@@ -91,7 +91,7 @@ const StatsSection = () => {
                   alt="AQI"
                   width={300}
                   height={250}
-                  className="w-full h-auto object-contain opacity-80"
+                  className="w-full h-auto object-contain opacity-50"
                   priority
                 />
               </div>

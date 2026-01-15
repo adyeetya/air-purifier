@@ -104,8 +104,8 @@ const HowWeWork = () => {
                                         className="w-full h-full object-contain"
                                     />
                                     {/* Name Overlay - Centered on image */}
-                                    <div className={`absolute inset-0 flex items-center justify-center ${step.id === 1 ? 'translate-x-[-5px]' : ''}`}>
-                                        <span className="text-sm font- text-gray-900">
+                                    <div className={`absolute inset-0 flex items-center justify-center ${step.id === 1 ? 'translate-x-[-5px]' : ''} ${step.id === 3 ? 'translate-x-[5px]' : ''}`}>
+                                        <span className="text-sm font-semibold text-gray-900">
                                             {step.name}
                                         </span>
                                     </div>
