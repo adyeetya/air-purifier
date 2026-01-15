@@ -138,7 +138,7 @@ const Hero = () => {
               ))}
             </div>
             <p className="text-xs sm:text-sm text-gray-700 font-medium text-center">
-              Trusted by hundreds of companies
+              Rated on results, not reviews.
             </p>
           </motion.div>
         </div>

@@ -75,7 +75,7 @@ const ProductsSection = () => {
                         className="text-gray-600 font-light mb-8 md:mb-12"
                         variants={itemVariants}
                     >
-                        Three systems. One mission: Make every enclosed journey breathable.
+                        Three systems. One mission: Make every breath breathable.
 
                     </motion.p>
 
