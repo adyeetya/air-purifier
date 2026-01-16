@@ -6,8 +6,7 @@ import { motion } from 'framer-motion'
 import ConnectButton from './ConnectWithUs'
 import AutoCarousel from './ImagesSlider'
 const Hero = () => {
-  const line1 = "You are not breathing air."
-  const line2 = "You are breathing damage."
+ 
   const images = ['/images/brands/Logo1.png', '/images/brands/Logo2.png', '/images/brands/Logo3.png', '/images/brands/Logo4.png']
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -62,21 +61,18 @@ const Hero = () => {
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
         <div className="max-w-4xl mx-auto w-full text-center px-4">
           {/* Animated Title */}
-          <div className="mb-6">
+          <div className="my-6">
             {/* First Line - Better mobile spacing */}
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl  font-semibold sm:font-bold leading-tight sm:leading-normal">
+              <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-light  leading-tight sm:leading-normal">
                 <span className="block">
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">You</motion.span>
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">are</motion.span>
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">not</motion.span>
-
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">breathing</motion.span>
-                  <motion.span variants={wordVariants} className="inline-block">air.</motion.span>
+                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">Turning</motion.span>
+                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">Polluted</motion.span>
+                  <motion.span variants={wordVariants} className="inline-block">Spaces.</motion.span>
                 </span>
               </h1>
             </motion.div>
@@ -87,13 +83,11 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
             >
-              <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl  font-semibold sm:font-bold leading-tight sm:leading-normal mt-2">
+              <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl  font-semibold   leading-tight sm:leading-normal mt-2">
                 <span className="block">
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">You</motion.span>
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">are</motion.span>
-
-                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">breathing</motion.span>
-                  <motion.span variants={wordVariants} className="inline-block">damage.</motion.span>
+                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">Into</motion.span>
+                  <motion.span variants={wordVariants} className="inline-block mr-1 sm:mr-2">Breathable</motion.span>
+                  <motion.span variants={wordVariants} className="inline-block">Environments.</motion.span>
                 </span>
               </h1>
             </motion.div>
